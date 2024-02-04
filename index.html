@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        /* background-color: black; */
+      }
+      .card-container {
+        display: flex;
+        height: 85vh;
+        justify-content: center;
+        flex-direction: row;
+      }
+      .card {
+        background-color: aliceblue;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.397),
+          inset 20px 20px 50px white;
+        margin: 10px;
+        width: 250px;
+        border: 1px solid black;
+        border-radius: 15px;
+      }
+      #section1,
+      #section4,
+      #section7 {
+        border-radius: 15px 15px 0px 0px;
+        padding: 0px 20px;
+        text-align: center;
+        color: aliceblue;
+      }
+      #section2,
+      #section5,
+      #section8 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      #section3,
+      #section6,
+      #section9 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      h1,
+      h4,
+      p {
+        margin: 0px;
+      }
+      h1 {
+        padding: 30px 0px 10px 0px;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.534);
+        text-transform: uppercase;
+      }
+      p {
+        font-size: 10px;
+        padding: 10px 5px;
+      }
+      .price {
+        border-bottom: 2px solid rgba(128, 128, 128, 0.644);
+        position: relative;
+        height: 100px;
+        padding-bottom: 30px;
+        margin: auto;
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0px;
+      }
+      sup {
+        align-self: flex-start;
+        font-size: 30px;
+        position: relative;
+        top: 30px;
+      }
+      span {
+        font-size: 70px;
+        margin: 0px;
+        font-weight: 800;
+        align-self: center;
+        height: 80%;
+      }
+      sub {
+        align-self: flex-end;
+        font-size: 20px;
+        position: relative;
+        right: 5px;
+      }
+
+      li {
+        list-style: none;
+        font-size: 11px;
+      }
+
+      .features {
+        font-size: 10px;
+        width: 90%;
+      }
+
+      ul {
+        padding: 0px;
+      }
+
+      .point {
+        display: flex;
+        align-items: flex-start;
+        padding: 5px 10px;
+      }
+
+      .bullet {
+        height: 15px;
+        width: 25px;
+        border: 1px solid black;
+        border-radius: 50%;
+        margin: 2px 10px 0px 2px;
+      }
+
+      button {
+        margin-top: 10px;
+        border: none;
+        height: 40px;
+        border-radius: 10px;
+        padding: 0px 20px;
+      }
+
+      #section1,
+      #section2 .bullet,
+      #section3 button {
+        background: linear-gradient(
+          -70.6deg,
+          rgba(237, 3, 32, 0.87) 20.8%,
+          rgba(242, 182, 1, 0.911) 74.4%
+        );
+        border: none;
+        color: aliceblue;
+      }
+      #section4,
+      #section5 .bullet,
+      #section6 button {
+        background-image: linear-gradient(
+          109.6deg,
+          rgba(48, 207, 208, 1) 11.2%,
+          rgba(51, 8, 103, 1) 92.5%
+        );
+        color: aliceblue;
+        border: none;
+      }
+      #section7,
+      #section8 .bullet,
+      #section9 button {
+        background-image: linear-gradient(
+          108.7deg,
+          rgba(221, 22, 224, 1) 11%,
+          rgba(111, 22, 190, 1) 88.2%
+        );
+        color: aliceblue;
+        border: none;
+      }
+
+      @media (max-width: 600px) {
+        .card-container {
+          display: flex;
+          height: 85vh;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+        }
+        .card {
+          background-color: aliceblue;
+          box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.397),
+            inset 20px 20px 50px white;
+          margin: 10px;
+          width: 400px;
+          height: 85vh;
+          border: 1px solid black;
+          border-radius: 15px;
+        }
+        button {
+          margin: 20px;
+        }
+        .info {
+          display: flex;
+        }
+        .info #section3 button,
+        .info #section6 button,
+        .info #section9 button {
+          align-self: flex-end;
+          padding: 0px 30px;
+          margin: 0px 30px 30px 0px;
+        }
+        .price {
+          position: relative;
+          left: 60px;
+          margin-bottom: 10px;
+        }
+        h1 {
+          font-size: 50px;
+        }
+        .bullet {
+          width: 20px;
+        }
+        span {
+          font-size: 80px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card-container">
+      <div id="card1" class="card">
+        <div class="containt">
+          <div id="section1" class="section">
+            <h1>Basic</h1>
+            <p>
+              Lorem ipsumoij dolpor sit ainmet consectetur adipisicing elit.
+            </p>
+          </div>
+          <div class="info">
+            <div id="section2" class="section">
+              <div class="price">
+                <sup>$</sup>
+                <span>20</span>
+                <sub>/mo</sub>
+              </div>
+
+              <div class="features">
+                <ul>
+                  <div class="point">
+                    <div class="bullet">&nbsp; &nbsp; &nbsp;</div>
+                    <li>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      oye
+                    </li>
+                  </div>
+                  <div class="point">
+                    <div class="bullet">&nbsp; &nbsp; &nbsp;</div>
+                    <li>
+                      Lorem ipsum dolor sit amet consectetur adipisicing
+                      elit.oye
+                    </li>
+                  </div>
+                  <div class="point">
+                    <div class="bullet">&nbsp; &nbsp; &nbsp;</div>
+                    <li>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      oye
+                    </li>
+                  </div>
+                </ul>
+              </div>
+            </div>
+            <div id="section3" class="section">
+              <button><h4>BUY NOW</h4></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="card2" class="card">
+        <div class="containt">
+          <div id="section4" class="section">
+            <h1>Standard</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+              quibusdam saepe
+            </p>
+          </div>
+          <div class="info">
+            <div id="section5" class="section">
+              <div class="price">
+                <sup>$</sup>
+                <span>35</span>
+                <sub>/mo</sub>
+              </div>
+
+              <div class="features">
+                <ul>
+                  <div class="point">
+                    <div class="bullet">&nbsp; &nbsp; &nbsp;</div>
+                    <li>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      oye
+                    </li>
+                  </div>
+                  <div class="point">
+                    <div class="bullet">&nbsp; &nbsp; &nbsp;</div>
+                    <li>
+                      Lorem ipsum dolor sit amet consectetur adipisicing
+                      elit.oye
+                    </li>
+                  </div>
+                  <div class="point">
+                    <div class="bullet">&nbsp; &nbsp; &nbsp;</div>
+                    <li>
+                      Lorem ipsum dolor sit amet consectetur adipisicing
+                      elit.oye
+                    </li>
+                  </div>
+                </ul>
+              </div>
+            </div>
+            <div id="section6" class="section">
+              <button><h4>BUY NOW</h4></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="card3" class="card">
+        <div class="containt">
+          <div id="section7" class="section">
+            <h1>Premium</h1>
+            <p>Lorem ipsum dolor sit amet consectetur Porro quibusdam saepe</p>
+          </div>
+          <div class="info">
+            <div id="section8" class="section">
+              <div class="price">
+                <sup>$</sup>
+                <span>50</span>
+                <sub>/mo</sub>
+              </div>
+
+              <div class="features">
+                <ul>
+                  <div class="point">
+                    <div class="bullet">&nbsp; &nbsp; &nbsp;</div>
+                    <li>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      oye
+                    </li>
+                  </div>
+                  <div class="point">
+                    <div class="bullet">&nbsp; &nbsp; &nbsp;</div>
+                    <li>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      oye
+                    </li>
+                  </div>
+                  <div class="point">
+                    <div class="bullet">&nbsp; &nbsp; &nbsp;</div>
+                    <li>
+                      Lorem ipsum dolor sit amet consectetur adipisicing
+                      elit.oye
+                    </li>
+                  </div>
+                </ul>
+              </div>
+            </div>
+            <div id="section9" class="section">
+              <button><h4>BUY NOW</h4></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
